@@ -1,17 +1,21 @@
-//separate adjacent input strings by a space.
-#include <iostream>
-#include <string>
-
-using std::string;
-using std::cin;
-using std::cout;
-using std::endl;
-
-int main()
-{
-    string str;
-    for (string buff; cin >> buff; str += (str.empty() ? "" : " ") + buff);
-    cout << "The concatenated string is " << str << endl;
-
-    return 0;
-}
+#include<iostream>  
+#include<vector>  
+#include<iterator>  
+#include<string>  
+using namespace std;  
+  
+int main()  
+{  
+      
+    string s, s1;  
+    const string s_exit = "exit";  
+    while (cin >> s1)  
+    {  
+        if (s1 == s_exit)  
+            break;  
+        s += s1;  
+        s += " ";  
+    }
+    cout << s << endl;  
+    return 0;  
+}  
